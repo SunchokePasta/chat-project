@@ -37,7 +37,7 @@ public class ClientHandler implements Runnable {
             out.println("Enter your username: ");
             username = br.readLine();
             System.out.println(username + " has joined the chat.");
-            server.broadcast(username + " has joined the chat.");
+            server.broadcast(username + " has joined the chat.", this);
             //keep reading messages from the client until they disconnect
             while ((line = br.readLine()) != null) {
                 System.out.println("Recieved: " + "[" + username + "]: " + line);

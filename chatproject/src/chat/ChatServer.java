@@ -41,6 +41,8 @@ public class ChatServer {
 
     // send a message to all clients except the sender
     public void broadcast(String msg, ClientHandler sender) {
+
+
         for (ClientHandler c : clients) {
             if (c != sender) {
                     c.send(msg);
