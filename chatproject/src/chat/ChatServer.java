@@ -52,4 +52,14 @@ public class ChatServer {
     public void removeClient(ClientHandler c) {
         clients.remove(c);
     }
+
+    public String getUsernames() {
+        StringBuilder sb = new StringBuilder();
+        for (ClientHandler c : clients) {
+            sb.append("[ " + c.getUsername() + " ]" );
+        }
+
+        String usernames = sb.toString();
+        return usernames;
+    }
 }
